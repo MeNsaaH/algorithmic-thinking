@@ -54,9 +54,8 @@ coverage.xml
 
 # Django stuff:
 *.log
-dhis2/static/
 local_settings.py
-*.sqlite3
+db.sqlite3
 
 # Flask stuff:
 instance/
@@ -79,7 +78,6 @@ target/
 
 # celery beat schedule file
 celerybeat-schedule
-celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
@@ -87,8 +85,6 @@ celerybeat.pid
 # Environments
 .env
 .venv
-.virtualenv/
-.virtualenv_master/
 env/
 venv/
 ENV/
