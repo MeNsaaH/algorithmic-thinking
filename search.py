@@ -8,10 +8,12 @@ class Search():
         '''
         linear search algorithm to find element x in array A_list
         '''
-        for i in range(len(A_list)):
-            if A_list[i] == x:
-                return i
-        return None
+        A_list = tuple(A_list)
+        tmp = []
+        for i in A_list:
+            if i == x:
+                tmp.append(i)
+        return tmp
 
     def bin_search(A_list, start, stop, key):
         '''
@@ -21,9 +23,10 @@ class Search():
         if A_list[m] == key:
             return m
         if start > stop:
-            return None
+            toret = None
         if key < A_list[m]:
-            return bin_search(A_list, start, m - 1, key)
+            toret =  bin_search(A_list, start, m - 1, key)
         else:
-            return bin_search(A_list, m + 1, stop, key)
+            toret =  bin_search(A_list, m + 1, stop, key)
+        return toret
 
